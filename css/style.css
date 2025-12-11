@@ -2623,20 +2623,7 @@ textarea {
 .box ul {
   text-align: left !important;
 }
-/* Remove justification from headings */
-.box h1,
-.box h2,
-.box h3 {
-  text-align: left !important;
-  white-space: normal !important;
-}
 
-/* Keep paragraphs and lists justified */
-.box p,
-.box ul,
-.box li {
-  text-align: justify !important;
-}
 
 /* ================= CTA SECTION ================= */
 .cta-section {
