@@ -2068,25 +2068,34 @@ textarea {
     font-weight: bold;
 }
 
-/* MOBILE FIX — no spacing issues */
+
 @media (max-width: 600px) {
+
+    /* Containers spacing */
     .why-choose-section {
-        padding: 0 10px;
-        margin: 25px auto;
+        padding: 0 12px !important;
+        margin: 20px auto !important;
     }
 
     .why-title {
-        font-size: 1.5rem;
-        font-family: sans-serif;
+        font-size: 1.5rem !important;
+    }
+
+    .why-list {
+        text-align: left !important;     /* FIX word spacing */
     }
 
     .why-list li {
-        font-size: 0.95rem;
-        font-family: sans-serif;
-        padding: 8px 0;
-        text-align: justify;
+        font-size: 1rem;
+        margin-bottom: 10px !important;  /* Even spacing */
+        padding-left: 28px !important;    /* keep tick aligned */
+        text-align: left !important;      /* main FIX */
+        letter-spacing: normal !important;
+        word-spacing: normal !important;
+        line-height: 1.45 !important;     /* smooth spacing */
     }
 }
+
 /* ====== CYBER TOP SECTION ====== */
 .cyber-top-section {
     width: 100%;
@@ -2875,17 +2884,8 @@ textarea {
     font-family: sans-serif;
   }
 }
-/* Reduce bottom space of first section */
-.edu-section {
-  margin-bottom: 0px !important;
-  padding-bottom: 10px;   /* optional, keeps a small clean gap */
-}
 
-/* Reduce top space of second section */
-.why-section {
-  margin-top: 0px !important;
-  padding-top: 5px;      /* optional */
-}
+
 /* ===========================================
    TWO COLUMN LAYOUT (LEFT BOXES + RIGHT IMAGE IN MIDDLE)
 =========================================== */
