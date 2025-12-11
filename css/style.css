@@ -1816,93 +1816,61 @@ textarea {
         font-family: sans-serif;
     }
 }
-/* ============ AI TRAINING 4-BOX GRID ============ */
+/* ================= 4-BOX SECTION ================= */
 
-.ai-grid {
-    width: 100%;
-    padding: 60px 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
+.four-box-section {
+  width: 100%;
+  padding: 40px 20px;
+  font-family: sans-serif;
 }
 
-/* EACH ROW = 2 BOXES */
-.ai-row {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 40px;
+/* Responsive grid layout */
+.four-box-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* 2 columns on laptop */
+  gap: 30px;                              /* spacing between boxes */
 }
 
-/* INDIVIDUAL BOX */
-.ai-box {
-    flex: 1;
-    background: #f7f9fc;
-    padding: 30px;
-    border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    text-align: left;
+/* Box design */
+.box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: justify;
 }
 
-.ai-icon {
-    width: 55px;
-    margin-bottom: 15px;
+.box h2 {
+  color: #003366;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
-.ai-box h3 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    font-family: sans-serif;
-    margin-bottom: 10px;
-    color: #003366;
+.box p {
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-.ai-box p {
-    font-size: 1rem;
-    font-family: sans-serif;
-    line-height: 1.65;
+.box-icon {
+  width: 55px;
+  margin-bottom: 15px;
+}
+
+
+/* ================= MOBILE VIEW ================= */
+@media (max-width: 900px) {
+  
+  .four-box-container {
+    grid-template-columns: 1fr;   /* 1 column on mobile */
+  }
+
+  .box {
     text-align: justify;
+  }
 }
 
-/* ============ TABLET ============ */
-@media (max-width: 992px) {
 
-    .ai-row {
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .ai-box {
-        width: 100%;
-    }
-}
-
-/* ============ MOBILE ============ */
-@media (max-width: 600px) {
-
-    .ai-grid {
-        padding: 30px 20px;
-        gap: 30px;
-    }
-
-    .ai-box {
-        padding: 20px;
-    }
-
-    .ai-box h3 {
-        font-size: 1.3rem;
-        font-family: sans-serif;
-    }
-
-    .ai-box p {
-        font-size: 0.95rem;
-        font-family: sans-serif;
-    }
-
-    .ai-icon {
-        width: 48px;
-    }
-}
 /* ================= CLOUD INTRO SECTION ================= */
 .cloud-intro {
     width: 100%;
@@ -2453,75 +2421,209 @@ textarea {
     line-height: 1.5;
   }
 }
-/* ================= SMALL BUSINESS SECTION ================= */
-.sb-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    max-width: 1300px;
-    margin: 50px auto;
-    padding: 0 20px;
+/* ================= WORKSHOP SECTION ================= */
+
+.workshop-section {
+  width: 100%;
+  padding: 40px 20px;
+  font-family: sans-serif;
 }
 
-/* Left + Right Columns */
-.sb-left, .sb-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+.workshop-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
 }
 
-/* Boxes */
-.sb-box {
-    background: #ffffff;
-    border-radius: 14px;
-    padding: 25px 25px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-    text-align: justify;
+/* Card / Box Style */
+.box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: justify;
 }
 
-/* Icon inside box */
-.sb-icon {
-    width: 80px;
+/* Headings */
+.box h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #003366;
+}
+
+.box h3 {
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+/* Paragraphs & Text */
+.box p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.box ul {
+  margin-left: 20px;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.box li {
+  font-size: 16px;
+}
+
+/* Image Box */
+.image-box img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+/* Icons */
+.icon {
+  width: 70px;
+  margin-bottom: 10px;
+}
+@media (max-width: 900px) {
+
+  .workshop-container {
+    grid-template-columns: 1fr;     /* stack */
+    gap: 10px !important;           /* small uniform spacing */
+  }
+
+  .box {
+    margin: 0 !important;           /* REMOVE all unwanted margins */
+    padding: 22px;
+  }
+
+  /* Fix extra spacing caused by UL lists */
+  .box ul {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+
+  /* Remove default margin between headings and lists */
+  .box h2,
+  .box h3 {
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
+  }
+}
+@media (max-width: 900px) {
+
+  .workshop-container {
+    grid-template-columns: 1fr;   /* stack cards */
+    gap: 0 !important;            /* remove spacing between rows */
+  }
+
+  /* Remove ALL margins inside every box */
+  .box {
+    margin: 0 !important;
+    padding: 22px;
+  }
+
+  /* Fix spacing caused by headings */
+  .box h2,
+  .box h3 {
+    margin: 5px 0 !important;
+  }
+
+  /* Fix spacing caused by lists */
+  .box ul {
+    margin: 5px 0 !important;
+    padding-left: 18px !important;  /* keep bullets aligned */
+  }
+
+  .box li {
+    margin: 3px 0 !important;
+  }
+
+  /* Fix image inside second-row left box */
+  .icon {
+    margin: 0 !important;
+  }
+}
+@media (max-width: 900px) {
+
+  /* Remove ALL spacing between cards */
+  .card {
+    margin: 0 !important;
+    padding: 20px !important;
+    border-radius: 16px;
     display: block;
-    margin: 0 auto 15px auto;
+  }
+
+  /* FORCE boxes to touch with no gap */
+  .card + .card {
+    margin-top: 0 !important;
+  }
+
+  /* Remove grid spacing entirely */
+  .workshop-container {
+    row-gap: 0 !important;
+    column-gap: 0 !important;
+    gap: 0 !important;
+  }
+
+  /* Remove internal element margins */
+  .card h2,
+  .card h3,
+  .card p,
+  .card ul,
+  .card li,
+  .card img {
+    margin: 0 !important;
+    padding: 0;
+  }
+
+  .card ul {
+    padding-left: 18px !important;
+  }
+
+  .card li {
+    margin-bottom: 4px !important;
+  }
+}
+@media (max-width: 900px) {
+
+  /* Completely remove layout spacing */
+  .mobile-stack-wrapper {
+    line-height: 0;         /* Removes spacing between block elements */
+  }
+
+  /* Restore line-height inside each card */
+  .mobile-stack-wrapper .box {
+    line-height: normal;
+    margin: 0 !important;
+  }
+
+  /* Fix spacing from UL */
+  .mobile-stack-wrapper .box ul {
+    margin: 0 !important;
+    padding-left: 18px !important;
+  }
+
+  .mobile-stack-wrapper .box li {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Fix heading top margins */
+  .mobile-stack-wrapper .box h2,
+  .mobile-stack-wrapper .box h3 {
+    margin-top: 0 !important;
+  }
+}
+.box ul li {
+  display: list-item !important;
+  white-space: normal !important;
+  word-break: normal !important;
+  text-align: left !important; /* IMPORTANT FIX */
+}
+.box ul {
+  text-align: left !important;
 }
 
-/* Right-side top image */
-.sb-main-img {
-    width: 100%;
-    border-radius: 14px;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Tighten mobile spacing */
-@media (max-width: 992px) {
-    .sb-container {
-        flex-direction: column;
-        gap: 20px;
-        padding: 0 10px;
-    }
-
-    .sb-box {
-        padding: 18px 18px;
-    }
-}
-
-@media (max-width: 600px) {
-    .sb-container {
-        margin: 20px auto;
-    }
-
-    .sb-box {
-        padding: 15px;
-    }
-
-    .sb-main-img {
-        width: 100%;
-    }
-}
 /* ================= CTA SECTION ================= */
 .cta-section {
     width: 100%;
