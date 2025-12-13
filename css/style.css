@@ -189,7 +189,7 @@ body { font-family: "Segoe UI", sans-serif; }
 }
 
 /* Mobile Banner Height */
-@media (max-width: 760px) {
+@media (max-width: 750px) {
     .hero-slider {
         height: 260px;
     }
